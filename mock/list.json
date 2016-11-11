@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "商品列表",
+    "href": "/index.html#/goods",
+    "icon": "glyphicon-home"
+  },
+  {
+    "id": 1,
+    "name": "商品查询",
+    "href": "/index.html#/search",
+    "icon": "glyphicon-search"
+  },
+  {
+    "id": 2,
+    "name": "添加商品",
+    "href": "/index.html#/add",
+    "icon": "glyphicon-plus"
+  },
+  {
+    "id": 3,
+    "name": "用户列表",
+    "href": "/index.html#/user",
+    "icon": "glyphicon-user"
+  },
+  {
+    "id": 4,
+    "name": "用户查询",
+    "href": "/index.html#/searchuser",
+    "icon": "glyphicon-search"
+  }
+]

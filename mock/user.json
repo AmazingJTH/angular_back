@@ -1,0 +1,37 @@
+[
+  {
+    "userid": 1,
+    "username":"Lisa",
+    "usertype":"白银会员",
+    "userpass":"lisalisa",
+    "email":"lisa@126.com"
+  },
+  {
+    "userid": 2,
+    "username":"Mike",
+    "usertype":"普通会员",
+    "userpass":"mikemike",
+    "email":"mike@126.com"
+  },
+  {
+    "userid": 3,
+    "username":"Sara",
+    "usertype":"铜牌会员",
+    "userpass":"sarasara",
+    "email":"sara@126.com"
+  },
+  {
+    "userid": 4,
+    "username":"Jhon",
+    "usertype":"金牌会员",
+    "userpass":"jhonjhon",
+    "email":"jhon@126.com"
+  },
+  {
+    "userid": 5,
+    "username":"Amazon",
+    "usertype":"普通会员",
+    "userpass":"amazonamazon",
+    "email":"amazon@126.com"
+  }
+]

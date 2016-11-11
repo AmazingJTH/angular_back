@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ecApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>后台管理</title>
+  <link rel="stylesheet" href="/libs/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="/prd/styles/app.scss" /> -->
+</head>
+<body>
+  <div class="container-fluid" ng-controller="indexController" >
+    <!-- header -->
+    <div class="row" style="background:#E0EEEE">
+      <h1 class="col-xs-6">
+        <a href="index.html"><img src="/img/logo.jpg" width="240" height="70" alt="logo" style="border-radius:5%;"/></a>
+        E瓷后台管理系统
+      </h1>
+      <!-- 导航 -->
+      <ul class="nav nav-tabs col-xs-6 " role="tablist" style="margin-top:60px;padding-left:60px;">
+        <li role="presentation" class="active" ng-repeat="li in lists" ng-click="change($index)">
+          <a href={{li.href}} ng-show="$index == index ? false:true"><span class="glyphicon {{li.icon}}">{{li.name}}</span></a>
+          <a href={{li.href}} ng-show="$index == index ? true:false" style="background:#BBFFFF"><span class="glyphicon {{li.icon}}">{{li.name}}</span></a>
+        </li>
+      </ul>
+
+      <!-- <div class="btn-group col-xs-5" style="margin-top:60px;padding-left:80px;">
+        <div ng-repeat= "li in lists" class="btn" style="padding:0;" ng-click="change($index)">
+          <a ng-show="$index == index ? true:false" type="button" class="btn btn-info" href={{li.href}}><span class="glyphicon {{li.icon}}">{{li.name}}</span></a>
+          <a ng-show="$index == index ? false:true" type="button" class="btn btn-default" href={{li.href}}><span class="glyphicon {{li.icon}}">{{li.name}}</span></a>
+        </div>
+      </div> -->
+    </div>
+    <!-- 品牌列表 -->
+    <div class="row" style="background:#eee;margin-top:2px;">
+      <div class="col-xs-9">
+        <a href="#" ng-repeat="url in urls" ><img src="/img/{{url.src}}" alt="{{url.name}}" style="width:80px; height:40px; margin:5px;"></a>
+      </div>
+
+      <form class="navbar-form navbar-left col-xs-3" role="search">
+        <div class="form-group">
+          检索： <input type="text" class="form-control" placeholder="请输入关键字" ng-model="keywords">
+        </div>
+        <!-- <button type="submit" class="btn btn-default" ng-model="search">查找</button> -->
+      </form>
+    </div>
+
+    <!-- 表 -->
+    <div class="row">
+      <ng-view></ng-view>
+    </div>
+    <!-- footer -->
+    <div class="row" style="padding:10px;background:#E0EEEE;" >
+      <div class="col-xs-7"></div>
+      <div class="col-xs-2" style="clolr:#EE0000">
+        <p style="margin:0;">上海易瓷有限公司</p>
+        <p style="margin:0;">tel: 400-888-8888</p>
+      </div>
+      <div class="col-xs-1">
+        <img src="/img/service.png" width="140" height="50">
+      </div>
+    </div>
+  </div>
+  <script src="/libs/jquery.min.js"></script>
+  <script src="/libs/bootstrap.min.js"></script>
+  <script src="/libs/angular.min.js"></script>
+  <script src="/libs/angular-route.min.js"></script>
+  <script src="/src/scripts/app.js"></script>
+</body>
+</html>
